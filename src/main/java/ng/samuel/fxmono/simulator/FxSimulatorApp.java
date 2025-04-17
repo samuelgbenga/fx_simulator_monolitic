@@ -7,7 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class FxSimulatorApp {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(FxSimulatorApp.class, args);
 	}
 
 }
+
+

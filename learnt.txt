@@ -1,0 +1,29 @@
+🔐 How to defend against this
+Here are defenses you can layer in to protect your app:
+
+1. Secure your cookies
+Always use Secure + HttpOnly
+
+Use SameSite=Strict (or Lax for basic cross-site usage)
+
+2. IP binding / Fingerprinting
+Bind token to user IP address or User-Agent
+
+If the token is used from a new device/IP → invalidate it
+
+3. Use Refresh Tokens + Short-lived Access Tokens
+Access tokens expire quickly (e.g., 5-15 min)
+
+Refresh tokens last longer, but are stored securely too
+
+If access token is stolen, it becomes useless shortly
+
+4. Logout & Rotation
+On logout or detection of abuse → revoke both tokens
+
+Rotate refresh tokens after each use
+
+5. Rate limiting + anomaly detection
+Watch for abuse from unknown IPs
+
+Throttle suspicious requests
