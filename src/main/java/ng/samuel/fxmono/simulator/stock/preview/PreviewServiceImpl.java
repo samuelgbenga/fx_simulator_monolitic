@@ -57,10 +57,11 @@ public class PreviewServiceImpl implements PreviewService{
     }
 
 
-    private String fetchPeersInfo(String symbolList) {
+    private String fetchPeersInfo(String symbol) {
         return webClient.get()
                 .uri(uriBuilder -> uriBuilder
-                        .path("/v3/quote/" + symbolList)
+                        .path("/stable/quote")
+                        .queryParam("symbol", symbol)
                         .queryParam("apikey", FMP_API_KEY)
                         .build())
                 .retrieve()
