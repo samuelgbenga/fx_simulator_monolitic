@@ -1,6 +1,7 @@
 package ng.samuel.fxmono.simulator.portfolio.dto;
 
 import lombok.Data;
+import ng.samuel.fxmono.simulator.portfolio.account.Account;
 
 @Data
 public class AccountResponse {
@@ -19,12 +20,10 @@ public class AccountResponse {
 
     private double totalUnrealizedGainLoss_shortSelling;
 
-    public AccountResponse() {}
-
-//    public AccountResponse(Account account) {
-//        this.id = account.getId();
-//        this.email = account.getEmail();
-//        this.fund = account.getFund();
-//        this.joinedAt =account.getJoinedAt();
-//    }
+    public AccountResponse(Account account) {
+        this.id = account.getId();
+        this.email = account.getEmail();
+        this.fund = account.getFund();
+        this.joinedAt =account.getJoinedAt();
+    }
 }

@@ -9,7 +9,7 @@ public class IncorrectEmailException extends CustomException {
     private HttpStatus status = HttpStatus.BAD_REQUEST;
     private ErrorResponse errorResponse = new ErrorResponse();
 
-    public IncorrectEmailException(String message) {
+    public IncorrectEmailException() {
         super("This email does not exist in our record");
 
         errorResponse.setMessage("This email does not exist in our record");

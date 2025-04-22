@@ -9,7 +9,7 @@ public class PasswordNotMatchedException extends CustomException {
     private HttpStatus status = HttpStatus.BAD_REQUEST;
     private ErrorResponse errorResponse = new ErrorResponse();
 
-    public PasswordNotMatchedException(String message) {
+    public PasswordNotMatchedException() {
         super("The passwords do not match");
 
         errorResponse.setMessage("The passwords do not match");

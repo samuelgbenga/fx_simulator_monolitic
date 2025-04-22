@@ -8,7 +8,7 @@ public class IncorrectPasswordException extends CustomException {
     private HttpStatus status = HttpStatus.BAD_REQUEST;
     private ErrorResponse errorResponse = new ErrorResponse();
 
-    public IncorrectPasswordException(String message) {
+    public IncorrectPasswordException() {
         super("The password is incorrect");
 
         errorResponse.setMessage("The password is incorrect");

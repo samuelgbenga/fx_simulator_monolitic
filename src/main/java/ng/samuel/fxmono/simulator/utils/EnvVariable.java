@@ -22,4 +22,6 @@ public class EnvVariable {
 
     public String SECURITY_CIPHER_KEY() { return env.get("SECURITY_CIPHER_KEY"); }
 
+    public String EMAIL_NAME() { return env.get("EMAIL_NAME"); }
+
 }
